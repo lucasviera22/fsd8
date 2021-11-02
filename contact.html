@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fonts from google-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap" rel="stylesheet">
+    <!--CSS Styles-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--Favicon-->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/logo-site.gif"
+      />
+    <title>Portfolio Lucas Viera</title>
+  </head>
+  <body>
+    <nav>
+      <a href="https://bit.ly/3BDDIdf" target ="_blank">
+      <img 
+        alt = "Lucas Viera"  
+        src = "assets/icons/logo-site.gif"
+        width = "44px"
+        height="44px"
+        >
+      </a>
+      <h1 href = "#home">Lucas Viera</h1>
+      <ul calss = "navigation">
+        <li> <a href = "index.html#greet" class = "nav-link">About</a> </li>
+        <li> <a href = "index.html#skills" class = "nav-link">Skills</a> </li>
+        <li> <a href = "index.html#projects" class = "nav-link">Projects</a> </li>
+        <li> <a href = "contact.html" class = "nav-link"> Contact</a> </li>
+      </ul>
+      <button class ="burger-menu-btn" id="burger-menu-btn">
+        <ion-icon class = "bars" name = "menu-outline"></ion-icon>
+      </button>
+    </nav>
+    
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <h2>Get In Touch With Me</h2>
+      <div class="contact-form-container">
+        <div class="contact-form">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="sender-name"
+            placeholder="Enter Your Name"
+            class="input-field"
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="sender-email"
+            placeholder="Enter Your Email"
+            class="input-field"
+            required
+          />
+        </div>
+        <div class="form-control">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            cols="60"
+            rows="10"
+            placeholder="Enter Your Message"
+            name="message"
+            class="input-field"
+            required
+          ></textarea>
+        </div>      <!-- Email does not work-->
+        <button 
+          id = "send-btn"
+          class = "send-btn"
+          onclick=""
+          href="mailto:lucasviera22@gmail.com"
+          >SEND
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>      <!--TODO: Alinear mejor-->
+      <span class="built-by">
+        Built by Lucas Viera
+        <a href="https://bit.ly/3BDDIdf" target ="_blank">
+        <img 
+          alt = "Linkedin"  
+          src = "assets/icons/icon-linkedin.png"
+          width = "24px"
+          height="24px"
+          >
+        </a>
+        <a href="https://bit.ly/3jVfhBY" target ="_blank">  
+        <img
+          alt ="Github"                     
+          src = "assets/icons/icon-github.png"
+          width = "32px"
+          height = "32px"
+          >
+        </a>
+      </span>
+  </body>
+</html>

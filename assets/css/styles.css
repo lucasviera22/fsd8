@@ -1,0 +1,334 @@
+:root {
+  --font-family:"Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fefefe;
+  --primary-color: #11324D;
+  --secondary-color: #6B7AA1;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #C1CFC0;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color)
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Nav bar style */
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;     /*Value of 1 makes sure the nav var displays over any other element?*/
+  display: flex;
+  justify-content:space-around; /* Flexbox for Nav - Main axis*/
+  align-items: center;          /* Flexbox for Nav - Secondary axis*/
+  
+  padding: 1rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+nav h1 {
+  color: var(--primary-color);
+}
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+nav ul {
+  display: flex;  /*Flexbox used to show ul items inline*/
+  gap: 1.9rem;
+}
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+/*Burger menu button*/
+.burger-menu-btn {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display:none;    /*Buger menu button will be hidden by default and visible on mobile*/
+}
+
+/* About me section styles */
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
+}
+
+.profile img {
+  height: 15rem;
+  width: 15rem;
+}
+
+/* Media queries */
+
+@media (max-width: 400px) and (orientation: portrait) {
+  .profile img{
+    height: 5rem;
+    width: 5rem;
+  }
+  .burger-menu-btn {    /* Not currently working as expected*/
+    display:flex;   
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul li {
+    display: none;
+  }
+}
+
+.bio {
+  width: 25rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+  margin-bottom: var(--bottom-margin);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.bio h1 {
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p {
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+
+.about-me {
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
+}
+
+.about-me h2 {
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.about-me p {
+  text-align: left;
+  line-height: var(--line-height);
+  padding: 0.4rem;
+  margin-left: 10rem;   /*TODO: How to center but keep it left-aligned ??*/
+}
+
+/* Skills section */  /* TODO: CSS GRID ??*/
+.skills {
+  max-width: 70rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.icon {
+  height: 11rem;
+  text-align: center;
+}
+
+.icon-card {
+  background-color: #ffffff;
+  border-radius: 11px;
+  box-shadow: 0 3px 5px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.icon-card:hover {
+  cursor:pointer;
+}
+
+/* Projects Styles */
+.projects {
+  background-color: var(--bg-color);
+  padding: 32px 0;
+  margin-top: 2rem;
+}
+
+.project-img {
+  width: 65%;
+  height: 60%;
+}
+
+.projects-container {
+  display: flex;          /* Flexbox for Projects*/
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;  /*Main axis*/
+  align-items: center;    /*Secondary axis*/
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-container {
+  text-align: center;
+  width: 15rem;
+  padding: 1rem;
+}
+
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+.project-card:hover {
+  cursor: pointer;
+}
+
+/* Contact style */
+.contact {
+  margin-top: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-form-container {
+  max-width: 41rem;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px var(--secondary-shadow);
+}
+
+.contact-form-container label {
+  line-height: 3rem;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+
+.contact-form-container textarea {
+  min-height: 6rem;
+  font-size: 14px;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset var(--primary-color);
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #ffffff;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+}
+
+.send-btn:hover {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0,0,0, 0.1)
+}
+
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  transition: color 0.3s ease;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+footer a:hover {
+  color:var(--secondary-color);
+  cursor: pointer;
+}
+
+footer a:active {
+  font-style: oblique;
+}

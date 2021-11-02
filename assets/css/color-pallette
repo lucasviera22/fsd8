@@ -1,0 +1,19 @@
+#F6D7A7 rgb(246, 215, 167)  amarillo
+#F6EABE rgb(246, 234, 190)  amarillo clarito
+#C8E3D4 rgb(200, 227, 212)  verde
+#87AAAA rgb(135, 170, 170)  verde clarito
+
+
+Clases creadas por uno.
+En HTML tienen que ir con class="miClaseParaH2" dentro de la etiqueta
+En CSS empiezan con: .
+
+
+Identificadores para elementos de estilo unido
+En CSS Empiezan con: #
+
+
+E7E0C9  rgb(231, 224, 201)  beige
+C1CFC0  rgb(193, 207, 192)  verde
+6B7AA1  rgb(107, 122, 161)  azul
+11324D  rgb(17, 50, 77)     azul oscuro
