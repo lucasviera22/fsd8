@@ -47,11 +47,10 @@ nav {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1;     /*Value of 1 makes sure the nav var displays over any other element?*/
+  z-index: 1;     /*Value of 1 is to show the nav var over any other element*/
   display: flex;
   justify-content:space-around; /* Flexbox for Nav - Main axis*/
   align-items: center;          /* Flexbox for Nav - Secondary axis*/
-  
   padding: 1rem 3.5rem;
   background-color: var(--bg-color);
   box-shadow: 0 3px 5px rgba(0,0,0,0.1);
@@ -82,7 +81,8 @@ nav ul li {
   border: 0;
   background-color: transparent;
   cursor: pointer;
-  display:none;    /*Buger menu button will be hidden by default and visible on mobile*/
+  display: flex;
+  display:inline-block;    /*Buger menu button will be hidden by default and visible on mobile*/
 }
 
 /* About me section styles */
@@ -99,23 +99,6 @@ nav ul li {
 .profile img {
   height: 15rem;
   width: 15rem;
-}
-
-/* Media queries */
-
-@media (max-width: 400px) and (orientation: portrait) {
-  .profile img{
-    height: 5rem;
-    width: 5rem;
-  }
-  .burger-menu-btn {    /* Not currently working as expected*/
-    display:flex;   
-    align-items: center;
-    justify-content: center;
-  }
-  nav ul li {
-    display: none;
-  }
 }
 
 .bio {
@@ -137,20 +120,27 @@ nav ul li {
 }
 
 .about-me {
+  display: flex;            /* Flexbox for about me section*/
+  flex-direction: column;
   background-color: var(--bg-color);
   padding: 1rem 6rem;
+  
 }
 
 .about-me h2 {
+  align-items: center;
   margin-bottom: var(--bottom-margin);
   text-align: center;
 }
 
 .about-me p {
-  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;    /* Main axis*/
+  align-items: center;        /*Secondary axis*/
+  text-align: center;
   line-height: var(--line-height);
   padding: 0.4rem;
-  margin-left: 10rem;   /*TODO: How to center but keep it left-aligned ??*/
 }
 
 /* Skills section */  /* TODO: CSS GRID ??*/
@@ -179,8 +169,10 @@ nav ul li {
   background-color: #ffffff;
   border-radius: 11px;
   box-shadow: 0 3px 5px var(--primary-shadow);
-  padding: 20px;
-  margin: 10px;
+  padding: 1rem;
+  margin: 1rem;
+  height: 6rem;
+  width: 6rem;;
 }
 
 .icon-card:hover {
@@ -200,11 +192,11 @@ nav ul li {
 }
 
 .projects-container {
-  display: flex;          /* Flexbox for Projects*/
+  display: flex;            /* Flexbox for Projects*/
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;  /*Main axis*/
-  align-items: center;    /*Secondary axis*/
+  align-items: center;      /*Secondary axis*/
 }
 
 .projects-title {
@@ -304,6 +296,7 @@ nav ul li {
 
 /* Footer */
 footer {
+  
   padding: 1.25rem;
   text-align: center;
   margin: 2rem 0 0;
@@ -312,7 +305,10 @@ footer {
 }
 
 
-footer p {
+footer span {
+  display: flex;    /* Flexbox for footer span*/
+  justify-content: center;  /* Main axis*/
+  align-items: center;      /*Secondary axis*/
   margin: 0;
 }
 
@@ -329,6 +325,38 @@ footer a:hover {
   cursor: pointer;
 }
 
-footer a:active {
-  font-style: oblique;
+ion-icon {
+  font-size: 2rem;
+  color:var(--primary-color);
+}
+
+/* Media queries */
+@media (max-width: 400px) {
+  
+  /* .burger-menu-btn {    
+    display:flex;   
+    align-items: center;
+    justify-content: center;
+  } */
+  nav ul li {
+    display: none;
+  }
+  .profile img{
+    /* height: 7rem;
+    width: 7rem; */
+    size-adjust: 50%;
+  }
+  .bio {
+    max-width: 90%;
+  }
+}
+
+
+@media (min-width: 400 px) {
+  .burger-menu-btn {
+    display: none;
+  }
+  nav ul li {
+    display: none;
+  }
 }

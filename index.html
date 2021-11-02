@@ -29,7 +29,7 @@
         height="44px"
         >
       </a>
-      <h1 href = "#home">Lucas Viera</h1>
+      <h1 href = "#greet">Lucas Viera</h1>
       <ul calss = "navigation">
         <li> <a href = "#greet" class = "nav-link">About</a> </li>
         <li> <a href = "#skills" class = "nav-link">Skills</a> </li>
@@ -40,8 +40,9 @@
         <ion-icon class = "bars" name = "menu-outline"></ion-icon>
       </button>
     </nav>
+
     <!--Greeting section-->
-    <section class="profile" id="greet">
+    <section class="profile" id="profile">
       <img
         src="assets/img/profile.gif"
         alt="profile"
@@ -56,66 +57,49 @@
         </p>
       </div>
     </section>
+
     <!--About me section-->
     <section class="about-me">
       <h2>About Me</h2>
       <p>
         I'm Lucas Viera, a Software Engineering student who is always learning new
         things and looking forward to build very interesting projects.  
-      </p>
-      <p>
+        <br>
         I hope you find this portfolio interesting and feel free to reach me.
-      </p>
-      <p>
+        <br>
         Thanks for visiting!
       </p>
     </section>
-    <!--Skills section-->   <!--TODO: Add links to each site (HTML, CSS, JS, etc)-->
+    
+    <!--Skills section-->                   <!--TODO: Add links to each site (HTML, CSS, JS, etc)-->
     <section class="skills" id="skills">
       <h2 class="skill-header">My Top Skills</h2>
-      <div class="skills-wrapper">
-        <div>
-          <img
-            src="assets/icons/logo-html.png"
-            alt="HTML Logo"
-            loading="lazy"
-            class="icon icon-card"
-            />
-          <img
-            src="assets/icons/logo-css.png"
-            alt="CSS Logo"
-            loading="lazy"
-            class="icon icon-card"
-            />
-          <img
-            src="assets/icons/logo-js.png"
-            alt="JS Logo"
-            loading="lazy"
-            class="icon icon-card"
-            />
+      <div class="skills-wrapper">  
+        <div class = "icon">              <!--TODO: CSS Grid ??-->
+          <a href="https://mzl.la/3mD6SFd" target="_blank">
+            <ion-icon class = "icon-card" name="logo-html5"></ion-icon>
+          </a>
+          <a href="https://mzl.la/3pZdoIl" target="_blank">
+            <ion-icon class = "icon-card" name="logo-css3"></ion-icon>
+          </a>
+          <a href="https://mzl.la/3k0nK74" target="_blank"> 
+            <ion-icon class = "icon-card" name="logo-javascript"></ion-icon>
+          </a>
         </div>
         <div>
-          <img
-            src="assets/icons/logo-react.png"
-            alt="React Logo"
-            loading="lazy"
-            class="icon icon-card"
-            />
-          <img
-            src="assets/icons/logo-nodejs.png"
-            alt="NodeJS Logo"
-            loading="lazy"
-            class="icon icon-card"
-            />
-          <img
-            src="assets/icons/logo-git.png"
-            alt="Git Logo"
-            loading="lazy"
-            class="icon icon-card"
-            />
+          <a href="https://bit.ly/3BFg1RU" target="_blank">
+            <ion-icon class = "icon-card" name="logo-react"></ion-icon>
+          </a>
+          <a href="https://bit.ly/3q0aR0t" target="_blank">
+            <ion-icon class = "icon-card" name="logo-nodejs"></ion-icon>
+          </a>
+          <a href="https://bit.ly/3BDOzE5" target="_blank">
+            <ion-icon class = "icon-card" name="logo-github"></ion-icon>
+          </a>
         </div>
       </div>
     </section>
+
     <!--Projects section-->
     <section class="projects" id="projects">
       <h2 class="projects-title">My Projects</h2>
@@ -146,31 +130,43 @@
           </p>
           <a href="#" target="_blank" class="project-link">Check it Out</a>
         </div>
+        <div class="project-container project-card">
+          <img
+            src="assets/img/project1.png"
+            alt="project3"
+            loading="lazy"
+            class="project-img"
+            />
+          <h3 class="project-title">Project 3</h3>
+          <p class="project-details">
+            Project 3 was about...
+          </p>
+          <a href="#" target="_blank" class="project-link">Check it Out</a>
+        </div>
       </div>
     </section>
 
     <!-- Footer section -->
-    <footer>      <!--TODO: Alinear mejor-->
+    <footer>
       <span class="built-by">
-        Built by Lucas Viera
+        Copyright | Built by Lucas Viera
         <a href="https://bit.ly/3BDDIdf" target ="_blank">
-        <img 
-          alt = "Linkedin"  
-          src = "assets/icons/icon-linkedin.png"
-          width = "24px"
-          height="24px"
-          >
+          <ion-icon name="logo-linkedin"></ion-icon>
         </a>
         <a href="https://bit.ly/3jVfhBY" target ="_blank">  
-        <img
-          alt ="Github"                     
-          src = "assets/icons/icon-github.png"
-          width = "32px"
-          height = "32px"
-          >
+          <ion-icon name="logo-github"></ion-icon>
         </a>
       </span>
-      
     </footer>
+
+    <!-- Icons source code script -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
