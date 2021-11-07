@@ -51,9 +51,14 @@ nav {
   display: flex;
   justify-content:space-around; /* Flexbox for Nav - Main axis*/
   align-items: center;          /* Flexbox for Nav - Secondary axis*/
-  padding: 1rem 3.5rem;
+  padding: 1rem 3rem;
   background-color: var(--bg-color);
   box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+
+nav img {
+  width: 44px;
+  height: 44px;
 }
 nav h1 {
   color: var(--primary-color);
@@ -82,7 +87,7 @@ nav ul li {
   background-color: transparent;
   cursor: pointer;
   display: flex;
-  display:inline-block;    /*Buger menu button will be hidden by default and visible on mobile*/
+  display:none;    /*Buger menu button will be hidden by default and visible on mobile*/
 }
 
 /* About me section styles */
@@ -143,26 +148,34 @@ nav ul li {
   padding: 0.4rem;
 }
 
-/* Skills section */  /* TODO: CSS GRID ??*/
+/* Skills section */  
 .skills {
-  max-width: 70rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 75rem;
   margin: auto;
-  text-align: center;
   margin-top: 2.5rem;
+  text-align: center;
 }
 
 .skill-header {
   margin-bottom: 1rem;
 }
 
-.skills-wrapper img {
-  margin: 1rem;
+.skills-container {
+  display: flex;
+  justify-content: center;  /*Main axis*/
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 0.5rem;
 }
 
-.icon {
+.icon{
   height: 11rem;
-  text-align: center;
+  width: 11rem;
+  margin: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .icon-card {
@@ -172,7 +185,7 @@ nav ul li {
   padding: 1rem;
   margin: 1rem;
   height: 6rem;
-  width: 6rem;;
+  width: 6rem;
 }
 
 .icon-card:hover {
@@ -182,8 +195,10 @@ nav ul li {
 /* Projects Styles */
 .projects {
   background-color: var(--bg-color);
-  padding: 32px 0;
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 6rem;
+  margin-top: 4rem;
 }
 
 .project-img {
@@ -193,13 +208,13 @@ nav ul li {
 
 .projects-container {
   display: flex;            /* Flexbox for Projects*/
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: center;  /*Main axis*/
   align-items: center;      /*Secondary axis*/
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.projects-title {
+.projects-header {
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -296,7 +311,6 @@ nav ul li {
 
 /* Footer */
 footer {
-  
   padding: 1.25rem;
   text-align: center;
   margin: 2rem 0 0;
@@ -330,33 +344,107 @@ ion-icon {
   color:var(--primary-color);
 }
 
-/* Media queries */
-@media (max-width: 400px) {
-  
-  /* .burger-menu-btn {    
-    display:flex;   
-    align-items: center;
-    justify-content: center;
-  } */
-  nav ul li {
-    display: none;
+/* Media queries for medium-sized devices */
+@media (max-width: 720px) {
+  nav {
+    padding: 1.5rem 1rem;
   }
-  .profile img{
-    /* height: 7rem;
-    width: 7rem; */
-    size-adjust: 50%;
+
+  nav ul {
+    /* Style to make it go downwards. It will be hidden for now 
+      until we learn how to animate the burger button */
+      display: none;
+    /* position: fixed; */
+    /* background-color: var(--bg-color); */
+    /* flex-direction: column; */
+    /* top: 85px; */
+    /*left: 67%;*/  /* We want drop down menu to move below the burger button*/
+    /*width: 20%;*/ /* We want drop down menu to use 20% of screen width*/
+    /* text-align: right; */
+    /* transition: 0.5s ease-in; */
+  }
+
+  nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu-btn {
+    display: block;
+  }
+
+  .profile {
+    margin-top: 0.5rem;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .profile img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .bio {
+    width: 20rem;
+  }
+
+  .about-me {
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+  }
+
+  .about-me h2 {
+    text-align: center;
+  }
+
+  .about-me p {
+    text-align: justify;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .icon-card {
+    padding: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 15rem;
+  }
+  
+  .contact-form-container {
+    max-width: 15rem;
+  }
+}
+
+/* Media queries for smaller devices */
+@media screen and (max-width: 420px) {
+  .profile img {
+    height: 10rem;
+    width: 10rem;
   }
   .bio {
-    max-width: 90%;
+    width: 18rem;
   }
-}
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .icon-card {
+    padding: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+  }
+  .project-container {
+    width: 10rem;
+  }
 
-
-@media (min-width: 400 px) {
-  .burger-menu-btn {
-    display: none;
+  .contact-form-container {
+    max-width: 10rem;
   }
-  nav ul li {
-    display: none;
-  }
-}
+} 
